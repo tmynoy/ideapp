@@ -1,0 +1,23 @@
+<div class="search">
+  <h3>カテゴリー検索</h3>
+  <%= form_with(url: search_ideas_path, local: true, method: :get, class: "search-form") do |form| %>
+    <%= form.text_field :keyword, placeholder: "カテゴリー名", class: "search-input" %>
+    <%= form.submit "検索", class: "search-btn" %>
+  <% end %>
+</div>
+
+<div class="result">
+  <%= @ideas.count %>件ヒット！
+</div>
+
+<div class="find">
+  <% @ideas.each do |idea| %>
+    <div class="content_find">
+      <%= idea.id %> - 
+      <%= idea.category.name %>：
+      <%= idea.body %>
+    </div>
+  <% end %>
+</div>
+
+<%= link_to 'TOPへ', root_path, method: :get %>

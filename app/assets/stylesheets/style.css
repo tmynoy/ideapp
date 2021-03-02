@@ -1,0 +1,29 @@
+.contents {
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.find {
+  margin-top: 20px;
+  margin-left: 30px;
+  margin-bottom: 40px;
+}
+
+.content_find {
+  margin-bottom: 10px;
+}
+
+.search {
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.result {
+  margin-top: 30px;
+  margin-left: 20px;
+  margin-right: 20px;
+  border-bottom: 1px solid;
+  width: 150px;
+  color: red;
+  text-align: center;
+}
