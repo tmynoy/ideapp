@@ -2,9 +2,9 @@ class IdeasController < ApplicationController
   def index
     @ideas = Idea.all
     @category = Category.new
-    @idea_category = IdeaCategory.new 
+    @idea_category = IdeaCategory.new
   end
-  
+
   def create
     @idea_category = IdeaCategory.new(idea_params)
     if @idea_category.valid?
@@ -21,8 +21,8 @@ class IdeasController < ApplicationController
   end
 
   private
+
   def idea_params
     params.require(:idea_category).permit(:name, :body)
   end
-
 end
